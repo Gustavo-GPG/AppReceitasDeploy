@@ -1,0 +1,68 @@
+.recommendation-card {
+    width: 280px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    margin-left: 1;
+    background: linear-gradient(to right, #47494b, #43474e);
+  }
+  
+  .recommendation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .recommendation-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .recommendation-title {
+    padding: 16px;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(to right, #47494b, #43474e);
+    border-radius: 0 0 16px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Animação suave ao carregar */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .recommendation-card {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 640px) {
+    .recommendation-card {
+      width: 240px;
+    }
+  
+    .recommendation-image {
+      height: 180px;
+    }
+  
+    .recommendation-title {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }

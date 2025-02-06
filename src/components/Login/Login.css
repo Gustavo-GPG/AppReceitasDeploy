@@ -1,0 +1,111 @@
+.container {
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #ff9900d3, #e0ca00e3);
+    width: 100%;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 28rem;
+    background: rgba(255, 251, 0, 0.795);
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(207, 204, 10), 0 10px 10px -5px rgba(232, 245, 50, 0.589);
+    padding: 2rem;
+  }
+  
+
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--orange-100);
+    margin-bottom: 1rem;
+  }
+  
+  .icon-container svg {
+    width: 2rem;
+    height: 2rem;
+    color: var(--orange-500);
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+  }
+  
+  .header p {
+    color: var(--gray-600);
+  }
+  
+  /* Form styles */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 65%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+    pointer-events: none;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .input-field:focus {
+    border-color: var(--orange-500);
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2);
+  }
+  
+
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgb(200, 214, 75);
+    color: rgb(33, 36, 19);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    background: linear-gradient(to right, var(--orange-600), var(--red-600));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  

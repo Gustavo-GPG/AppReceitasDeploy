@@ -1,0 +1,106 @@
+/* favoriteRecipes.css */
+
+.favorite-recipes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(248, 211, 0);
+  }
+  
+  .favorite-filter-buttons {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(248, 211, 0);
+    justify-content: space-evenly;
+  }
+  
+  .favorite-filter-buttons button {
+    display: flex;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .favorite-filter-buttons button:hover {
+    background-color: #45a049;
+  }
+  
+  .favorite-recipe-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: rgb(248, 211, 0);
+  }
+  
+  .favorite-recipe-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+  }
+  
+  .favorite-recipe-info {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .favorite-recipe-info h5 {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .favorite-recipe-info h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  .favorite-recipe-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .favorite-recipe-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  
+  .favorite-recipe-actions img {
+    width: 30px;
+    height: auto;
+  }
+  
+  .favorite-recipe-actions p {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .favorite-no-favorites-message {
+    font-size: 18px;
+    color: #888;
+    text-align: center;
+  }
+ 
