@@ -15,15 +15,15 @@ function Header() {
   };
 
   const headerTitle = () => {
-    if (pathname === '/meals') return 'Meals';
-    if (pathname === '/drinks') return 'Drinks';
-    if (pathname === '/profile') return 'Profile';
-    if (pathname === '/done-recipes') return 'Done Recipes';
-    if (pathname === '/favorite-recipes') return 'Favorite Recipes';
+    if (pathname === '/AppReceitasDeploy/meals') return 'Meals';
+    if (pathname === '/AppReceitasDeploy/drinks') return 'Drinks';
+    if (pathname === '/AppReceitasDeploy/profile') return 'Profile';
+    if (pathname === '/AppReceitasDeploy/done-recipes') return 'Done Recipes';
+    if (pathname === '/AppReceitasDeploy/favorite-recipes') return 'Favorite Recipes';
   };
 
   const handleClick = () => {
-    navigate('/profile');
+    navigate('/AppReceitasDeploy/profile');
   };
 
   const handleSearch = () => {

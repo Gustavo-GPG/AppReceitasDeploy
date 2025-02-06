@@ -32,7 +32,7 @@ function SearchBar() {
       return window.alert(alertMessage);
     }
     if (mealsData.length === 1) {
-      navigate(`/meals/${mealsData[0].idMeal}`);
+      navigate(`/AppReceitasDeploy/meals/${mealsData[0].idMeal}`);
     }
   };
 
@@ -43,7 +43,7 @@ function SearchBar() {
       return window.alert(alertMessage);
     }
     if (drinksData.length === 1) {
-      navigate(`/drinks/${drinksData[0].idDrink}`);
+      navigate(`/AppReceitasDeploy/drinks/${drinksData[0].idDrink}`);
     }
   };
 
@@ -52,10 +52,10 @@ function SearchBar() {
     if (searchOption === firstLetter && searchInput.length > 1) {
       window.alert('Your search must have only 1 (one) character');
     }
-    if (pathname === '/meals') {
+    if (pathname === '/AppReceitasDeploy/meals') {
       await handleSearchMeals();
     }
-    if (pathname === '/drinks') {
+    if (pathname === '/AppReceitasDeploy/drinks') {
       await handleSearchDrinks();
     }
   }

@@ -23,7 +23,7 @@ function Login() {
 
   const submitAndNavigate = (event: React.FormEvent<HTMLFormElement>) => {
     handleSubmit(email)(event);
-    navigate('/meals');
+    navigate('/AppReceitasDeploy/meals');
   };
 
   return (
