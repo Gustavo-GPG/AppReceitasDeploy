@@ -96,13 +96,18 @@ async function getDrinkById(idDrink: string): Promise<DrinksDetailsType | null> 
  }
 const fetchByCategory = async (pathname: string, category: string) => {
   try {
-    const endpoint = pathname === '/meals'
+    const endpoint = pathname === '/AppReceitasDeploy/meals'
       ? `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
       : `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`;
+      
 
     const response = await fetch(endpoint);
     const data = await response.json();
-    return (data[pathname.replace('/', '')].slice(0, 12));
+    
+    
+    return pathname.includes('/meals')
+      ? data.meals.slice(0, 12)
+      : data.drinks.slice(0, 12);
   } catch (error) {
     console.error('Erro ao buscar receitas:', error);
   }
@@ -110,26 +115,32 @@ const fetchByCategory = async (pathname: string, category: string) => {
 
 const fetchAllRecipes = async (pathname: string) => {
   try {
-    const endpointAll = pathname === '/meals'
+    const endpointAll = pathname === '/AppReceitasDeploy/meals'
       ? 'https://www.themealdb.com/api/json/v1/1/search.php?s='
       : 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=all';
 
     const responseAll = await fetch(endpointAll);
     const dataAll = await responseAll.json();
-    return (dataAll[pathname.replace('/', '')].slice(0, 12));
+    return pathname.includes('/meals') 
+      ? dataAll.meals.slice(0, 12) 
+      : dataAll.drinks.slice(0, 12);
   } catch (error) {
     console.error('Erro ao buscar receitas:', error);
   }
 };
 const fetchCategories = async (pathname: string) => {
   try {
-    const endpoint = pathname === '/meals'
+    const endpoint = pathname === '/AppReceitasDeploy/meals'
       ? 'https://www.themealdb.com/api/json/v1/1/list.php?c=list'
       : 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list';
 
     const response = await fetch(endpoint);
     const data = await response.json();
-    return (data[pathname.replace('/', '')].slice(0, 5));
+    
+    
+    return pathname.includes('/meals') 
+      ? data.meals.slice(0, 5) 
+      : data.drinks.slice(0, 5);
   } catch (error) {
     console.error('Erro ao buscar categorias:', error);
   }

@@ -10,15 +10,18 @@ export default function Recipes() {
   const [layout, setLayout] = useContext(GlobalContext);
   const { searchResults } = layout;
   const { pathname } = useLocation();
-
+  console.log(pathname);
+  
   useEffect(() => {
     const initialFetch = async () => {
       const data = await fetchAllRecipes(pathname);
+      const key = pathname.includes('/meals') ? 'meals' : 'drinks';
+
       setLayout((prevLayout) => ({
         ...prevLayout,
         searchResults: {
           ...prevLayout.searchResults,
-          [pathname.replace('/', '')]: data,
+          [key]: data,
         },
       }));
     };
@@ -38,8 +41,8 @@ export default function Recipes() {
 
   return (
     <div className="recipes-container">
-      {pathname === '/meals' && searchResults.meals.length > 0 && renderRecipes(searchResults.meals)}
-      {pathname === '/drinks' && searchResults.drinks.length > 0 && renderRecipes(searchResults.drinks)}
-    </div>
+      {pathname.includes('/meals') && searchResults.meals?.length > 0 && renderRecipes(searchResults.meals)}
+      {pathname.includes('/drinks') && searchResults.drinks?.length > 0 && renderRecipes(searchResults.drinks)}
+  </div>
   );
 }

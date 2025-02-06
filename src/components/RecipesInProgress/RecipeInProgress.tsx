@@ -6,7 +6,7 @@ import { Heart, Share2 } from 'lucide-react';
 
 export default function RecipesInProgress() {
   const { copiedMessageVisible, copyToClipboard, drinkData, handleFavorite,
-    isFavorited, mealData, selectedCheckboxes, serDrinkData, setIsFavorited, setMealData,
+    isFavorited, mealData, selectedCheckboxes, setDrinkData, setIsFavorited, setMealData,
     setSelectedCheckboxes, id, pathname, handleCheck,
     numberOfIngredients, setNumberOfIngredients, totalIngredientsCount,
     handleCountIngredients, handleFinishRecipe } = useRecipeInProgress();
@@ -19,14 +19,15 @@ export default function RecipesInProgress() {
         if (id !== undefined) {
           if (pathname.includes('meals')) {
             data = await getMealById(id);
+            
             setMealData(data);
           } else {
             data = await getDrinkById(id);
-            serDrinkData(data);
+            
+            setDrinkData(data);
           }
-          handleCountIngredients(data);
-          console.log(handleCountIngredients(data));
           
+          handleCountIngredients(data);
           
         }
       } catch (error) {
@@ -104,6 +105,7 @@ export default function RecipesInProgress() {
       </div>      
     );
   };
+  
   return (
     <div className="recipe-container">
       {mealData && (
@@ -161,7 +163,7 @@ export default function RecipesInProgress() {
           
           <div className="ingredients-section">
             <h3 className="ingredients-title">Ingredients</h3>
-            {generateCheckBox(mealData)}
+            {generateCheckBox(drinkData)}
           </div>
         </div>
       )}

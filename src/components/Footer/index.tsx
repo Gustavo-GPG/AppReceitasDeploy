@@ -6,10 +6,10 @@ import './Footer.css';
 function Footer() {
   return (
     <footer className="footer" data-testid="footer">
-      <Link to="/drinks">
+      <Link to="/AppReceitasDeploy/drinks">
         <img src={ drinkIcon } data-testid="drinks-bottom-btn" alt="" />
       </Link>
-      <Link to="/meals">
+      <Link to="/AppReceitasDeploy/meals">
         <img src={ mealIcon } data-testid="meals-bottom-btn" alt="" />
       </Link>
     </footer>

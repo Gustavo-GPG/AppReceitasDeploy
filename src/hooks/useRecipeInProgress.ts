@@ -3,7 +3,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { DrinksDetailsType, MealsDetailsType } from '../types';
 
 function useRecipeInProgress() {
-  const [drinkData, serDrinkData] = useState<DrinksDetailsType | null>(null);
+  const [drinkData, setDrinkData] = useState<DrinksDetailsType | null>(null);
   const [mealData, setMealData] = useState<MealsDetailsType | null>(null);
   const [isFavorited, setIsFavorited] = useState(false);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState<string[]>([]);
@@ -69,11 +69,12 @@ function useRecipeInProgress() {
   };
 
   const handleCountIngredients = (data: any) => {
+    
     const totalcount = Object.keys(data)
       .filter((key) => key
         .startsWith('strIngredient') && data[key] && data[key].trim() !== '')
       .length;
-
+    
     setTotalIngredientsCount(totalcount);
   };
 
@@ -94,12 +95,12 @@ function useRecipeInProgress() {
 
     const updatedDoneRecipes = [...storedDoneRecipes, doneRecipe];
     localStorage.setItem('doneRecipes', JSON.stringify(updatedDoneRecipes));
-    navigate('/done-recipes');
+    navigate('/AppReceitasDeploy/done-recipes');
   };
 
   return {
     drinkData,
-    serDrinkData,
+    setDrinkData,
     mealData,
     setMealData,
     isFavorited,

@@ -15,16 +15,16 @@ export default function Profile() {
   }
 
   const recipesDone = () => {
-    navigate('/done-recipes');
+    navigate('/AppReceitasDeploy/done-recipes');
   };
 
   const recipesFavorite = () => {
-    navigate('/favorite-recipes');
+    navigate('/AppReceitasDeploy/favorite-recipes');
   };
 
   const logoutRecipe = () => {
     localStorage.clear();
-    navigate('/');
+    navigate('/AppReceitasDeploy');
   };
 
   return (

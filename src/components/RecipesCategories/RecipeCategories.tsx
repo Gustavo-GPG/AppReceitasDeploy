@@ -15,6 +15,8 @@ function RecipesCategories() {
   const [layout, setLayout] = useContext(GlobalContext);
   const [category, setCategory] = useState<string>();
 
+  const key = pathname.includes('/meals') ? 'meals' : 'drinks';
+
   useEffect(() => {
     (async () => {
       const dataCategory = await fetchCategories(pathname);
@@ -31,7 +33,7 @@ function RecipesCategories() {
     setLayout({
       searchResults: {
         ...layout.searchResults,
-        [pathname.replace('/', '')]: data,
+        [key]: data,
       },
     });
   };
@@ -41,7 +43,7 @@ function RecipesCategories() {
     setLayout({
       searchResults: {
         ...layout.searchResults,
-        [pathname.replace('/', '')]: data,
+        [key]: data,
       },
     });
   };

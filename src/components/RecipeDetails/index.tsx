@@ -13,7 +13,7 @@ function RecipeDetails(props: any) {
   const [mealsRecomendation, setMealsRecomendation] = useState<RecipeDetailsType[]>([]);
   const [linkCopied, setLinkCopied] = useState(false);
   const { handleFavorite,
-    isFavorited, setIsFavorited, setMealData, serDrinkData,
+    isFavorited, setIsFavorited, setMealData, setDrinkData,
     handleCountIngredients } = useRecipeInProgress();
   const { pathname } = useLocation();
 
@@ -84,7 +84,7 @@ function RecipeDetails(props: any) {
             setMealData(data);
           } else {
             data = await getDrinkById(id);
-            serDrinkData(data);
+            setDrinkData(data);
           }
           handleCountIngredients(data);
         }
@@ -112,9 +112,9 @@ function RecipeDetails(props: any) {
   const recommendations = tipo === 'meals' ? drinksRecomendations : mealsRecomendation;
   const handleProgress = () => {
     if (tipo === 'meals') {
-      navigate(`/meals/${id}/in-progress`);
+      navigate(`/AppReceitasDeploy/meals/${id}/in-progress`);
     } else if (tipo === 'drinks') {
-      navigate(`/drinks/${id}/in-progress`);
+      navigate(`/AppReceitasDeploy/drinks/${id}/in-progress`);
     }
   };
 
