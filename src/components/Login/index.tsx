@@ -23,7 +23,7 @@ function Login() {
 
   const submitAndNavigate = (event: React.FormEvent<HTMLFormElement>) => {
     handleSubmit(email)(event);
-    navigate('https:/gustavo-gpg.github.io/AppReceitasDeploy/meals');
+    navigate('/AppReceitasDeploy/meals');
   };
 
   return (
