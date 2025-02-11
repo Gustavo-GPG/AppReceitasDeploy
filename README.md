@@ -16,47 +16,11 @@ Durante essa experiência tive meu foco de contribuição na comunicação com a
 
 🗣️ Kanban Trello
 ---
-# 🖥️ Iniciando aplicação
-• Para copiar o repositório para uma pasta local, use o seguinte comando no terminal:
+# 🖥️ Acesse o site
 
-```bash
-git clone git@github.com:juliomatiastrybe/recipes-app.git
 ```
-
-Caso você não tenha o Git instalado, você pode instalá-lo usando os seguintes comandos, dependendo do seu sistema operacional:
-
-Debian/Ubuntu (Terminal Bash):
-```bash
-sudo apt-get install git
-```
-Windows (PowerShell):
-```bash
-winget install --id Git.Git -e --source winget
-```
-Ou você pode seguir a documentação do site [git](https://git-scm.com/downloads) para mais meios de instalação.
-
-• Navegue até a pasta criada no clone e abra o terminal
-```bash
-nmp install
-```
-⚠️**Atenção:** você precisa ter o node instalado para poder instalar os pacotes de dependência, caso não tenha instalado siga as intruções em [Node](https://nodejs.org/en/download/package-manager)
-
-❗ **Importante:** a versão do node precisa ser >= 16.
-
-
-#🌐 Navegador
----
-  Após instalar as dependências, abra o aplicativo no navegador utilizando o seguinte comando no terminal:
-  ```bash
-  npm run dev
-  ```
-
-#🧪Testes
----
-A aplicação possui cobertura de testes de integração utilizando Vitest com RTL. Para visualizar a cobertura, execute o seguinte comando no terminal:
-```bash
-npm run test
-```
+https://gustavo-gpg.github.io/Gustavo-Portifolio
+````
 
 #Autores e agradecimento
 ---
