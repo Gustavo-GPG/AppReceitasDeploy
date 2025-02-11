@@ -19,7 +19,7 @@ Durante essa experiência tive meu foco de contribuição na comunicação com a
 # 🖥️ Acesse o site
 
 ```
-https://gustavo-gpg.github.io/Gustavo-Portifolio
+https://gustavo-gpg.github.io/AppReceitasDeploy/
 ````
 
 #Autores e agradecimento
